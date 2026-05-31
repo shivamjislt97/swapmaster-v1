@@ -1,0 +1,33 @@
+# Secrets — NEVER commit these
+facefusion_bot_restore/run/.env
+facefusion_bot_restore/run/rclone.conf
+
+# Large Docker backups
+facefusion_bot_restore/backup/*.tar.gz
+facefusion_bot_restore/backup/*.zip
+
+# Runtime data
+facefusion_bot_restore/run/outputs/
+facefusion_bot_restore/run/temp/
+facefusion_bot_restore/run/logs/
+
+# IDE / system
+.vscode/
+.idea/
+.cursor-server
+.windsurf-server
+.vscode-server
+__pycache__/
+*.pyc
+.DS_Store
+
+# Lightning.ai internals
+.lightning_studio/
+.semantic_search/
+.verdent/
+.agents/
+.aws/
+.codeium/
+.gemini/
+graphify-out/
+skills-lock.json

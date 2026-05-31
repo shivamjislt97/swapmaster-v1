@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  facefusion_bot:
+    image: facefusion-v5-pro:latest
+    runtime: nvidia
+    container_name: facefusion_bot
+    restart: unless-stopped
+    ports:
+      - "8765:8765"
+    env_file: .env
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      - RCLONE_BIN=/usr/local/bin/rclone
+      - RCLONE_CONF=/app/.config/rclone/rclone.conf
+    volumes:
+      - ./outputs:/workspace/pipeline/workspace/output
+      - ./temp:/workspace/pipeline/workspace/temp
+      - ./logs:/workspace/pipeline/logs
+      - ./rclone.conf:/workspace/.config/rclone/rclone.conf:ro
+    healthcheck:
+      test: ["CMD-SHELL", "python3 -c \"import urllib.request; urllib.request.urlopen('http://localhost:8765/healthz', timeout=8)\" || exit 1"]
+      interval: 30s
+      timeout: 10s
+      start_period: 90s
+      retries: 3
