@@ -390,12 +390,12 @@ If decoding fails → file saved as `{file_id}.mp4` (e.g. `y9RElKiB.mp4`), then 
 
 ### Current Backup Location (GDrive)
 
-| Backup | GDrive Folder | Date | Size |
-|--------|--------------|------|------|
-| `facefusion_v5_pro_20260531_193402.tar.gz` | `SwapMaster V1 Backup (2026-05-31)` | 2026-05-31 | ~16GB |
-| `master_docker_backup_20260527_203904.tar.gz` | `Master Docker Backup` | 2026-05-27 | ~16GB |
+| Backup | GDrive Link | Date | Size |
+|--------|------------|------|------|
+| `facefusion_v5_pro_20260531_193402.tar.gz` | [📥 Download](https://drive.google.com/open?id=1QMNTPhlQ7QL6i211iaiuakExhyoZQN7Z) | 2026-05-31 | ~16GB |
+| `master_docker_backup_20260527_203904.tar.gz` | `Master Docker Backup` (GDrive) | 2026-05-27 | ~16GB |
 
-> 📌 **GDrive shareable link will be added here once upload completes.**
+> 📌 **Latest backup direct link:** https://drive.google.com/open?id=1QMNTPhlQ7QL6i211iaiuakExhyoZQN7Z
 
 ### How to Create a New Backup
 
