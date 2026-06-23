@@ -1,0 +1,82 @@
+# Environment files (secrets)
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+venv/
+.venv/
+
+# Logs
+*.log
+app/pipeline/logs/*.pid
+app/pipeline/logs/*.touch
+
+# Runtime data
+app/pipeline/downloads/
+app/pipeline/workspace/temp/
+app/pipeline/workspace/output/
+app/pipeline/.mega_link_cache.json
+app/pipeline/.drive_token
+app/pipeline/.mega_creds
+app/pipeline/logs/auto_sleep.log
+app/pipeline/logs/bot_runtime.log
+app/pipeline/logs/health_monitor.log
+app/pipeline/logs/process_guard.log
+app/pipeline/logs/process_tree.log
+app/pipeline/logs/progress_poller.log
+app/pipeline/logs/storage_cleanup.log
+app/pipeline/logs/telegram_pipeline_proof.json
+app/pipeline/logs/worker_result_*.json
+app/pipeline/logs/worker_trace_*.log
+app/pipeline/logs/current_job.json
+app/pipeline/logs/pipeline_state.json
+app/pipeline/logs/queue_state.json
+app/pipeline/logs/process_guard_state.json
+app/pipeline/logs/last_error.txt
+app/pipeline/logs/last_cleanup_summary.json
+
+# Persistent data (user-specific)
+app/persistent/config.json
+app/persistent/faces/
+
+# Cache
+app/facefusion/.cache/
+app/pipeline/cache/
+*.cache
+
+# Models (downloaded separately, large files)
+# app/facefusion/.assets/models/*.onnx  # Uncomment if models not in git
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temp files
+/tmp/
+*.tmp
+*.temp
+
+# Docker (if migrating back)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Files with potential secrets
+app/scripts/live_monitor.html
+app/scripts/dashboard.html
